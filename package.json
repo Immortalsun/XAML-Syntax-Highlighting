@@ -1,0 +1,26 @@
+{
+  "name": "xaml-lang",
+  "displayName": "XAML Language",
+  "description": "Syntax highlighting for .NET XAML files",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "grammars": [{
+      "language": "xaml",
+      "scopeName": "source.xaml",
+      "injectTo": ["source.xml"],
+      "embeddedLanguages": {
+        "string.quoted.double.xml": "xaml"
+      },
+      "tokenTypes": {
+        "string.quoted.double.xml": "other"
+      },
+      "path": "./syntaxes/xaml.tmLanguage.json"
+    }]
+  }
+}
