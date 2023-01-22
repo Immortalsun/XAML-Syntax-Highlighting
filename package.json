@@ -11,16 +11,12 @@
   ],
   "contributes": {
     "grammars": [{
-      "language": "xaml",
+      "path": "./syntaxes/xamlInjection.json",
       "scopeName": "source.xaml",
-      "injectTo": ["source.xml"],
-      "embeddedLanguages": {
-        "string.quoted.double.xml": "xaml"
-      },
+      "injectTo": ["source.xml"], 
       "tokenTypes": {
         "string.quoted.double.xml": "other"
-      },
-      "path": "./syntaxes/xaml.tmLanguage.json"
+      }
     }]
   }
 }

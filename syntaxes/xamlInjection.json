@@ -1,0 +1,29 @@
+{
+	"scopeName": "source.xaml",
+	"injectionSelector":"L:string.quoted.double.xml",
+	"patterns": [
+		{
+			"include": "#binding"
+		},
+		{
+			"include": "#staticResource"
+		},
+		{
+			"include":"#xSpecifier"
+		}
+	],
+	"repository": {
+		"binding":{
+			"match":"Binding",
+			"name":"keyword.binding"
+		},
+		"staticResource":{
+			"match":"StaticResource",
+			"name":"keyword.staticResource"
+		},
+		"xSpecifier":{
+			"match":"x:",
+			"name":"keyword.xSpecifier"
+		}
+	}
+}
