@@ -10,13 +10,35 @@
     "Programming Languages"
   ],
   "contributes": {
+     "languages": [
+      {
+        "id": "xaml",
+        "extensions": [".xaml"]
+      }
+    ],
     "grammars": [{
       "path": "./syntaxes/xamlInjection.json",
       "scopeName": "source.xaml",
-      "injectTo": ["source.xml"], 
-      "tokenTypes": {
-        "string.quoted.double.xml": "other"
+      "language": "xaml"
+    }],
+    "configurationDefaults": {
+      "editor.insertSpaces": false,
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "scope": "tag.left.open",
+            "settings": {
+              "foreground": "#ff8800"
+            }
+          },
+          {
+            "scope": "tag.right.close",
+            "settings": {
+              "foreground": "#0dd650"
+            }
+          }
+        ]
       }
-    }]
+    }
   }
 }

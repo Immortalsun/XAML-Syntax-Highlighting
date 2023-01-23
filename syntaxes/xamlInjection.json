@@ -1,6 +1,5 @@
 {
 	"scopeName": "source.xaml",
-	"injectionSelector":"L:string.quoted.double.xml",
 	"patterns": [
 		{
 			"include": "#binding"
@@ -10,6 +9,9 @@
 		},
 		{
 			"include":"#xSpecifier"
+		},
+		{
+			"include":"#tag-expression"
 		}
 	],
 	"repository": {
@@ -24,6 +26,17 @@
 		"xSpecifier":{
 			"match":"x:",
 			"name":"keyword.xSpecifier"
+		},
+		"tag-expression":{
+			"begin":"\\<",
+			"end":"\\>",
+			"beginCaptures":{
+				"0":{"name":"tag.left.open"}
+			},
+			"endCaptures":{
+				"0":{"name":"tag.right.close"}
+			},
+			"name":"tag-expression"
 		}
 	}
 }
